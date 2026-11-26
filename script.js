@@ -3,6 +3,11 @@
 //    text: 문제 문장, answer: 정답(true = O, false = X), explain: 해설
 // ===============================
 const questions = [
+    {
+    text: "'p이면 q이다'가 참일 때, p는 q이기 위한 충분조건이다.",
+    answer: true,
+    explain: "p ⇒ q가 참이면 p는 q이기 위한 충분조건, q는 p이기 위한 필요조건입니다."
+  },
   {
     text: "'2는 홀수이다'는 명제이다.",
     answer: true,
