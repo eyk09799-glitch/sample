@@ -1,0 +1,93 @@
+/* 기본 설정 */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  font-family: "Pretendard", "Malgun Gothic", sans-serif;
+  background: #eef2f7;
+  color: #222;
+}
+
+/* 가운데 카드 */
+.card {
+  width: 100%;
+  max-width: 520px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+h1 { font-size: 1.6rem; margin-top: 0; }
+
+/* 숨기기용 클래스 (JS에서 붙였다 뗐다 함) */
+.hidden { display: none !important; }
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.question {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin: 28px 0;
+  min-height: 4em;
+}
+
+/* O / X 버튼 */
+.answer-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.ox-btn {
+  width: 110px;
+  height: 110px;
+  font-size: 3rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.ox-btn:hover:not(:disabled) { transform: scale(1.06); }
+.ox-btn:disabled { opacity: 0.4; cursor: default; }
+.ox-btn.o { background: #3b82f6; }
+.ox-btn.x { background: #ef4444; }
+
+/* 정답/오답 해설 */
+.feedback {
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 10px;
+  text-align: left;
+  line-height: 1.5;
+}
+.feedback.correct { background: #dcfce7; color: #166534; }
+.feedback.wrong   { background: #fee2e2; color: #991b1b; }
+
+/* 일반 버튼 */
+.main-btn {
+  margin-top: 20px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+}
+.main-btn:hover { background: #444; }
+
+.result { font-size: 2rem; font-weight: bold; }

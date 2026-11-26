@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>참/거짓 논리 퀴즈</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>🧠 참/거짓 논리 퀴즈</h1>
+
+    <!-- 1) 시작 화면 -->
+    <section id="start-screen">
+      <p>명제, 역·이·대우, '그리고/또는'에 대한 문장을 읽고<br><b>O(맞다)</b> 또는 <b>X(틀리다)</b>를 골라 보세요.</p>
+      <button id="start-btn" class="main-btn">시작하기</button>
+    </section>
+
+    <!-- 2) 문제 화면 -->
+    <section id="quiz-screen" class="hidden">
+      <div class="top-bar">
+        <span id="progress">1 / 10</span>
+        <span id="score">점수: 0</span>
+      </div>
+      <p id="question" class="question"></p>
+      <div class="answer-buttons">
+        <button class="ox-btn o" data-answer="true">O</button>
+        <button class="ox-btn x" data-answer="false">X</button>
+      </div>
+      <div id="feedback" class="feedback hidden"></div>
+      <button id="next-btn" class="main-btn hidden">다음 문제</button>
+    </section>
+
+    <!-- 3) 결과 화면 -->
+    <section id="result-screen" class="hidden">
+      <h2>퀴즈 끝!</h2>
+      <p id="result-text" class="result"></p>
+      <p id="result-message"></p>
+      <button id="restart-btn" class="main-btn">다시 하기</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
